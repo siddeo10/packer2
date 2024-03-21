@@ -8,6 +8,12 @@ pipeline {
   }
 
   stages {
+    stage("Packer Plugins") {
+      steps {
+        sh "packer plugins install -h"
+      }
+    }
+    
     stage("Initialize Packer") {
       steps {
 
